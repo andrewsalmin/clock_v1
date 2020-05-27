@@ -16,7 +16,7 @@ function calculateCanvas() {
     sideSmall = Math.round(sideLarge / 2);
     gap = 0;
 
-    canvas.width = 18 * sideLarge + 7 * sideSmall + 24 * gap;
+    canvas.width = 19 * sideLarge + 7 * sideSmall + 25 * gap;
     canvas.height = 5 * sideLarge + 4 * gap;
 }
 
@@ -73,7 +73,7 @@ function drawNumbers(hours, minutes, seconds, milliseconds) {
 
     //draw minutes ones
     drawNumber(minutes_1, sideLarge, gap);
-    ctx.translate(4 * (sideLarge + gap), 5 * (sideLarge - sideSmall));
+    ctx.translate(5 * (sideLarge + gap), 5 * (sideLarge - sideSmall));
 
     //draw seconds tens
     ctx.fillStyle = "#FFFF00";
@@ -84,7 +84,7 @@ function drawNumbers(hours, minutes, seconds, milliseconds) {
     drawNumber(seconds_1, sideSmall, gap);
 
     //return to starting point
-    ctx.translate(- 18 * sideLarge - 4 * sideSmall - 22 * gap, - 5 * (sideLarge - sideSmall));
+    ctx.translate(- 19 * sideLarge - 4 * sideSmall - 23 * gap, - 5 * (sideLarge - sideSmall));
 }
 
 function drawNumber(number, side, gap) {
